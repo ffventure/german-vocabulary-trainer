@@ -1,0 +1,20 @@
+POST http://localhost:3001/ 
+content-type: application/json
+
+{
+    "word": "test",
+    "genus": "m",
+    "singular": {
+      "nominative": "test",
+      "genitive": "test",
+      "dative": "test",
+      "accusative": "test"
+    },
+    "plural": {
+      "nominative": "test",
+      "genitive": "test",
+      "dative": "test",
+      "accusative": "test"
+    },
+    "sk": "test"
+}
