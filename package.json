@@ -1,22 +1,27 @@
 {
   "name": "german-vocabulary-trainer",
   "version": "0.0.1",
-  "description": "Web application for german wordlist management and vocabulary practice",
+  "description": "E-learning web application for german vocabulary practice using custom wordlists",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build:ui": "@powershell Remove-Item -Recurse -Force build && cd ../full-stack-open-2023/part-3/phonebook && npm run build && @powershell Copy-Item build -Recurse ../../../fso-2023-part-3",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "tsc": "tsc",
+    "dev": "nodemon --exec node --loader ts-node/esm index.ts",
+    "lint": "eslint --ext .ts .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ffventure",
   "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.46.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "mongoose": "^7.4.1",
-    "morgan": "^1.10.0"
+    "express": "^4.18.2"
   }
 }
