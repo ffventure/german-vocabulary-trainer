@@ -16,5 +16,8 @@ content-type: application/json
       "dative": "test",
       "accusative": "test"
     },
-    "sk": "test"
+    "translations": [{
+      "language": "sk",
+      "translation": "text"
+    }]
 }
